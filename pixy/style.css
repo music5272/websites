@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Header*/
+
+header {
+	color: white;
+	background-color: black;
+	padding: 20px;
+}
+
+header-box {
+	width: 90%;
+}
+
+header h1 {
+	display: inline;
+	font-size: 32px;
+	padding:20px;
+}
+
+header h1 a {
+	text-decoration: none;
+	color: white;
+}
+
+#menu {
+	display: none;
+}
+
+nav .dropdown {
+	display: none;
+}
+
+nav {
+	list-style-type: none;
+	display: inline;
+}
+
+.startLinks {
+	float: right;
+	position: relative;
+	top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	color: white;
+	text-decoration: none;
+}
+
+/*Inhalt*/
+
+main {
+	padding: 20px;
+}
+
+/*Inhalt Teil 1: Kontakt und Beispielfotos*/
+
+#beispiele {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*Box mit Kontakt und Öffnungszeiten*/
+
+#grosseBox {
+	height: 350px;
+	width: 46.5%;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	display: flex;
+	flex-direction: row;
+	margin: 1.5%;
+}
+
+#links {
+	padding: 30px;
+	padding-top: 50px;
+	width: 40%;
+	align-self: center;
+}
+
+#rechts {
+	padding: 30px;
+	padding-top: 50px;
+	width: 60%;
+	align-self: center;
+}
+
+table {
+	padding: 0px;
+	margin: 0px;
+}
+
+td {
+	width: 50%;
+}
+
+#kleineTabelle {
+	display: none;
+}
+
+/*Bilder mit Spezifikation*/
+
+div.bild {
+	height: 350px;
+	width: 21%;
+	border-width: 3px;
+	border-style: solid;
+	border-color: black;
+	margin: 1.5%;
+	text-align: center;
+}
+
+.mini {
+	display: none;
+}
+
+.bigger {
+	display: block;
+}
+
+/*Inhalte Teil 2: Team*/
+
+#team {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#uebTeam {
+	margin: 1.5%;
+}
+
+/*Anfahrt und Map*/
+
+#anfahrt {
+	height: 450px;
+	display: flex;
+	felx-direction: row;
+	margin: 20px;
+}
+
+div.anfahrtLinks {
+	width: 50%;
+	padding: 8% 0px 8% 8%;
+}
+
+#map {
+	width: 55%;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+/* Inhalt Impressum */
+
+#impressum {
+	padding: 0px 20px 0px 20px;
+}
+
+/*Footer*/
+
+footer {
+	background-color: black;
+	width: 100%;
+	color: white;
+}
+
+#footLinks {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+div.footLi {
+	padding: 20px;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+}
+
+#copyright {
+	color: white;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 1112px) {
+	
+	/*Navbar zu Burgermenu*/
+	
+	#menu {
+		display: inline-block;
+		position: relative;
+		top: 15px;
+		margin-bottom: 10px;
+		width: 20px;
+		padding-left: 30px;
+		padding-bottom: 20px;
+	}
+	
+	.startLinks {
+		display: none;
+	}
+	
+	nav {
+		position: relative;
+		display: inline-block;
+		float: right;
+		padding-left: 0px;
+	}
+	
+	.dropdown {
+		display: none;
+		position: absolute;
+		right: 0px;
+		z-index: 1;
+		float: right;
+	}
+	
+	.dropdown a {
+		display: block;
+		width: 200px;
+		height: 20px;
+		padding: 10px;
+		background-color: black;
+		color: white;
+		text-decoration: none;
+	}
+	
+	nav:hover .dropdown {
+		display: block;
+	}
+	
+	.dropdown a:hover {
+		background-color: #707070;
+	}
+
+	/*Inhalte Teil 2: Team*/
+
+	.team {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#uebTeam {
+		margin: 1.5%;
+	}
+	
+	/* Kontakt und Anfahrt */
+	
+	#grosseBox {
+		height: auto;
+		width: 46.5%;
+		border-style: solid;
+		border-width: 3px;
+		border-color: black;
+		display: flex;
+		flex-direction: row;
+		margin: 1.5%;
+	}
+	
+	#links {
+		width: 50%;
+	}
+	
+	#rechts {
+		width: 50%;
+	}
+	
+	/* Bilder */
+	
+	div.bild {
+		height: 200%;
+		width: 21%;
+		border-width: 3px;
+		border-style: solid;
+		border-color: black;
+		margin: 1.5%;
+		text-align: center;
+	}
+	
+	div.bild img {
+		width: 90%;
+		padding: 1px;
+	}
+	
+	/* Kontakt und Anfahrt/Map */
+	
+	#anfahrt {
+		height: 350px;
+		display: flex;
+		felx-direction: row;
+		margin: 20px;
+	}
+
+	div.anfahrtLinks {
+		width: 30%;
+		padding: 8%;
+	}
+
+	#map {
+		width: 70%;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+	
+}
+
+@media only screen and (max-width: 900px) {/*950px*/
+	
+	/*Inhalt Teil 1: Kontakt und Beispielfotos*/
+
+	#beispiele {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	/* Kontakt und Anfahrt */
+	
+	#grosseBox {
+		height: auto;
+		width: 100%;
+		border-style: solid;
+		border-width: 3px;
+		border-color: black;
+		display: flex;
+		flex-direction: row;
+		margin: 1.5%;
+	}
+	
+	#links {
+		width: 50%;
+	}
+	
+	#rechts {
+		width: 50%;
+	}
+	
+	/* Bilder */
+	
+	div.bild {
+		height: 200%;
+		width: 25%;
+		border-width: 3px;
+		border-style: solid;
+		border-color: black;
+		margin: 1.5%;
+		text-align: center;
+	}
+	
+	div.bild img {
+		width: 90%;
+		padding: 1px;
+	}
+	
+	/* Das Team */
+	
+	#uebTeam {
+		margin-top: 40px;
+	}
+	
+}
+
+@media only screen and (max-width: 750px) {
+	
+	/* Kontakt und Anfahrt */
+	
+	#grosseBox {
+		width: 90%;
+	}
+	
+	/* Bilder */
+	
+	#beispiele {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	/* Bilder für Abschnitt Team */
+	
+	#team {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	div.bild {
+		height: 50%;
+		width: 40%;
+		border-width: 3px;
+		border-style: solid;
+		border-color: black;
+		margin: 1.5%;
+		text-align: center;
+	}
+	
+	div.bild img {
+		width: 60%;
+		padding: 1px;
+	}
+	
+	/* Überschrift Team */
+	
+	#teamUebDiv {
+		text-align: center;
+	}
+	
+	/* Kontakt und Anfahrt/Map */
+	
+	#anfahrt {
+		display: block;
+		margin: 20px;
+		text-align: center;
+		height: 450px;
+	}
+
+	div.anfahrtLinks {
+		padding: 20px;
+		width: 100%;
+	}
+
+	#map {
+		padding-right: 20px;
+		width: 100%;
+		height: 250px;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+	
+}
+
+@media only screen and (max-width: 500px) {
+	
+	/* header */
+	
+	header h1 {
+		font-size: 25px;
+		margin-top: 10px;
+	}
+	
+	#menu {
+		top: 5px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+	
+	/* Kontakt und Anfahrt */
+	
+	#grosseBox {
+		width: 91%;
+		display: block;
+	}
+	
+	#grosseTabelle {
+		display: none;
+	}
+	
+	#kleineTabelle {
+		display: block;
+		width: 100%;
+	}
+	
+	#links {
+		padding: 10px;
+		padding-top: 0px;
+		width: 100%;
+	}
+
+	#rechts {
+		padding: 10px;
+		padding-top: 0px;
+		width: 100%;
+	}
+	
+	/* Bilder */
+	.mini {
+		display: block;
+	}
+	
+	.bigger {
+		display: none;
+	}
+	
+	#beispiele {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	/* Bilder für Abschnitt Team */
+	
+	#team {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	div.bild {
+		width: 41%;
+		height: 300px;
+		border-width: 3px;
+		border-style: solid;
+		border-color: black;
+		margin: 1.5%;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	
+	div.bild img {
+		width: 98%;
+		padding: 1px;
+	}
+	
+	/* Überschrift Team */
+	
+	#teamUebDiv {
+		text-align: center;
+	}
+	
+	/* Kontakt und Anfahrt/Map */
+	
+	#anfahrt {
+		display: block;
+		margin: 0px;
+		padding: 0px;
+		text-align: center;
+		height: 450px;
+	}
+
+	div.anfahrtLinks {
+		text-align: center;
+		margin: 0px;
+		padding: 0px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+	
+	div.anfahrtLinks p {
+		text-align: center;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+	}
+
+	#map {
+		margin: 20px;
+		height: 250px;
+		width: 90%;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	
+	/* Bilder für Abschnitt Team */
+	
+	div.bild {
+		height: 250px;
+	}
+	
+	div.bild img {
+		width: 95%;
+	}
+
+
+}
+
+@media only screen and (max-width: 400px) {
+	
+	/* Bilder für Abschnitt Team */
+	
+	div.bild {
+		height: 240px;
+	}
+	
+	div.bild img {
+		width: 95%;
+	}
+
+}
+
+@media only screen and (max-width: 350px) {
+	
+	#headerBox h1 {
+		font-size: 20px;
+	}
+	
+	#grosseBox {
+		font-size: 14px;
+	}
+	
+	/* Bilder für Abschnitt Team */
+	
+	p {
+		font-size: 14px;
+	}
+	
+	div.bild {
+		height: 200px;
+	}
+
+	div.bild img {
+		width: 95%;
+	}
+}
+
+
+
+

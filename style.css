@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	background-color: black;
+	color: white;
+	height: 55px;
+	font-size: 20px;
+}
+
+header div {
+	display: inline;
+	float: left;
+	font-size: 25px;
+	padding: 15px 20px 15px 20px;
+}
+
+header nav {
+	display: inline;
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+header nav a {
+	display: inline-block;
+	font-size: 20px;
+	padding: 35px 20px 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+
+#two {
+	margin: 0px;
+	padding: 20px;
+	background-color: #F7DFBD;
+}
+
+#two h2 {
+	text-align: center;
+	font-size: 40px;
+}
+
+#containerWork {
+	width: 80%;
+	margin: 0px 10%;
+	/*background-color: green;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#containerWork a {
+	text-decoration: none;
+}
+
+#containerWork a > div {
+	width: minmax(290px, 290px);
+	margin: 50px 50px;
+	padding: 20px;
+	background-color: #D5A175;
+}
+
+.workItem {
+	text-align: center;
+	width: 250px;
+	height: 250px;
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
+}
+
+.workItem p {
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.workItem:hover p {
+	font-size: 20px;
+	display: block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #FFFFFF;
+	background-color: rgba(0,0,0,0.43);
+}
+
+.workText {
+	text-align: center;
+	color: black;
+}
+
+#cajWork {
+	background-image: url("images/caj.png");
+	background-size: cover;
+	background-position: center;
+}
+
+#skalinadaWork {
+	background-image: url("images/skalinada.png");
+	background-size: cover;
+	background-position: center;
+}
+
+#donutWork {
+	background-image: url("images/donut.png");
+	background-size: cover;
+	background-position: center;
+}
+
+@media only screen and (max-width: 1025px) {
+	
+	#containerWork {
+		width: 90%;
+		margin: 0px 5%;
+		/*background-color: green;*/
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	#containerWork a > div {
+		width: minmax(290px, 290px);
+		margin: 20px 20px;
+		padding: 20px;
+		background-color: #D5A175;
+	}
+
+	.workItem {
+		text-align: center;
+		width: 250px;
+		height: 250px;
+		margin: 0px;
+		padding: 0px;
+		background-color: black;
+	}
+	
+}
+
+@media only screen and (max-width: 800px) {
+	
+	#containerWork {
+		width: 90%;
+		margin: 0px 5%;
+		/*background-color: green;*/
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	#containerWork a > div {
+		width: auto;
+		margin: 20px 20PX;
+		padding: 20px;
+		background-color: #D5A175;
+	}
+
+	.workItem {
+		text-align: center;
+		width: 250px;
+		height: 250px;
+		margin: 0px;
+		padding: 0px;
+		background-color: black;
+	}
+	
+	.workItem p {
+		display: none;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+

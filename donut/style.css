@@ -1,0 +1,1017 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+@media only screen and (max-width: 5000px) {
+
+body {
+	background: linear-gradient(90deg, #17FFFF, #FF85FF);
+	margin: 0;
+	padding: 0;
+	font-family: 'Bebas Neue', cursive;
+}
+
+header {
+	margin: 0;
+	padding: 20px 0 20px 0;
+	background: linear-gradient(0deg, rgba(255,255,255,0.30), rgba(255,255,255,0.5));
+	display: grid;
+	width: 100%;
+	height: 50px;
+	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: 50px;
+	grid-template-areas: 
+		"sideLeft logo logo logo none3 none3 none3 none3 nav nav sideRight";
+}
+
+#logo {
+	grid-area: logo;
+	width: 100%;
+	justify-self: start;
+	align-self: start;
+	margin: 0;
+	padding: 0;
+}
+	
+.menuBtn {
+	display: none;
+	color: black;
+	z-index: 2;
+}
+
+nav {
+	grid-area: nav;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#navLinks {
+	display: block;
+}
+
+#links {
+	display: flex;
+	flex-dorection: row-reverse;
+	align-content: center;
+	width: 100%;
+	heigth: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.navElement {
+	height: 30px;
+	width: 50px;
+	font-size: 30px;
+	margin: 20px;
+	color: black;
+	text-decoration: none;
+}
+	
+	
+/* erster Bereich */
+	
+#ersterBereich {
+	height: 600px;
+	background: linear-gradient(0deg, rgba(255,255,255,0.0), rgba(255,255,255,0.3));
+}
+
+#animationsbereich {
+	display: grid;
+	width: 100%;
+	height: 500px;
+	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	grid-template-areas: 
+		"none1 none3 none3 none3 none3 none3 none3 none3 none3 none3 none2"
+		"none1 headone headone headone headone none pink pink pink pink none2"
+		"none1 sub sub sub sub none4 pink pink pink pink none2"
+		"none1 none5 none5 non6e none6 none6 pink pink pink pink none2"
+		"none1 none5 none5 blue blue blue pink pink pink pink none2"
+		"none1 none5 none5 blue blue blue none8 none8 none8 none8 none2"
+		"none1 brown brown blue blue blue none8 none8 none8 none8 none2"
+		"none1 brown brown none7 none7 none7 none7 none7 none7 none7 none2";
+	grid-gap: 0;
+	align-items: center;
+	justify-items: center;
+}
+
+h1 {
+	font-size: 70px;
+	margin-bottom: 0;
+	grid-area: headone;
+	width: 100%;
+	text-align: left;
+	line-height: 1;
+}
+
+p {
+	font-size: 30px;
+	margin-top: 0;
+	grid-area: sub;
+	width: 100%;
+	text-align: left;
+}
+
+#rosa {
+	grid-area: pink;
+	/*background-color: black;*/
+	width: 110%;
+	z-index: 3;
+	animation: rosaanimation 2s;
+}
+
+#blau {
+	grid-area: blue;
+	/*background-color: white;*/
+	width: 100%;
+	z-index: 2;
+	position: relative;
+	left: 200px;
+	animation: blaueanimation 2s;
+}
+
+#braun {
+	grid-area: brown;
+	/*background-color: green;*/
+	width: 100%;
+	position: relative;
+	left: 300px;
+	top: 50px;
+	animation: brauneanimation 2.5s;
+}
+
+@keyframes rosaanimation { 
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+	position: relative;
+	right: 400px;
+	top: 400px;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;	
+	position: relative;
+	right: 0;
+	top: 0;
+  }
+}
+
+@keyframes blaueanimation { 
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+	position: relative;
+	left: -200px;
+	top: 400px;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;	
+	position: relative;
+	left: 200px;
+	top: 0;
+  }
+}
+
+@keyframes brauneanimation { 
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+	position: relative;
+	left: 100px;
+	top: 450px;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;	
+	position: relative;
+	left: 300px;
+	top: 50px;
+  }
+}
+
+/* Produkte */
+#articleProdukte {
+	padding-top: 100px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	height: 500px;
+}
+
+#articleProdukte h2 {
+	text-align: center;
+	padding-bottom: 40px;
+	font-size: 30px;
+}
+
+#produkteAussenAbstand {
+	width: 100%;
+	height: 500px;
+	display: grid;
+	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: 300px;
+	grid-template-areas: 
+		"side produkte produkte produkte produkte produkte produkte produkte produkte produkte sideZwei";
+	grid-gap: 0;
+	justify-items: center;
+}
+
+#produkteFlexbox {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	heigth: 100%;
+	grid-area: produkte;
+	display: flex;
+	justify-content: space-between;
+}
+	
+#produktEins img, #produktZwei img, #produktDrei img, #produktVier img {
+	padding-top: 10px;
+}
+
+.produkt {
+	width: 200px;
+	background-color: rgba(255,254,254,0.3);
+	border-radius: 20px;
+	height: 300px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.produkt .produkteDonuts {
+	width: 75%;
+}
+
+.produkt .name {
+	margin: 20px 0 0 0;
+	width: 86%;
+	padding: 1% 7% 1% 7%;
+	text-align: left;
+	font-weight: 500;
+}
+
+.produkt .beschreibung {
+	margin: 0;
+	width: 86%;
+	padding: 1% 7% 1% 7%;
+	text-align: left;
+	font-weight: 300;
+}
+
+.produkt .preis {
+	margin: 0;
+	width: 86%;
+	padding: 1% 7% 1% 7%;
+	text-align: right;
+	font-weight: 300;
+}
+
+/* strores */
+
+#articleStores {
+	background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.3));
+}
+
+#articleStores h2 {
+	text-align: center;
+	font-size: 30px;
+	padding-bottom: 40px;
+}
+
+#storesAussenAbstand {
+	width: 100%;
+	height: 500px;
+	display: grid;
+	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: 300px;
+	grid-template-areas: 
+		"side store store store store store store store store store sideZwei";
+	grid-gap: 0;
+	justify-items: center;
+}
+
+#storesInhalt {
+	grid-area: store;
+	width: 100%;
+}
+
+iframe {
+	float: left;
+}
+
+#rechteSeite {
+	margin: 0;
+	padding: 0;
+	width: 50%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+	grid-template-areas:
+		"links rechts"
+		"linksunten rechtsunten";
+	font-family: 'Roboto', sans-serif;
+}
+
+#storeEins {
+	grid-area: links;
+	padding: 0 20px 20px 20px;
+}
+
+#storeZwei {
+	grid-area: rechts;
+	padding: 0 20px 20px 20px;
+}
+
+#storeDrei {
+	grid-area: linksunten;
+	padding: 0 20px 20px 20px;
+}
+
+#storeVier {
+	grid-area: rechtsunten;
+	padding: 0 20px 20px 20px;
+}
+
+/* footer */
+
+footer {
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0 0 0;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.5));
+}
+
+footer div img {
+	width: 30px;
+	margin: 10px;
+}
+
+footer div a {
+	text-decoration: none;
+	color: black;
+}
+
+#footerSocials {
+	padding-bottom: 20px;
+}
+
+}
+
+@media only screen and (max-width: 1050px) {
+	header {
+		grid-template-areas: 
+			"sideLeft logo logo logo none3 none3 none3 nav nav nav";
+	}
+	
+	header #logo {
+		padding-top: 10px;
+	}
+	
+/* Animationen / Donuts */
+	
+	#rosa {
+		grid-area: pink;
+		/*background-color: black;*/
+		width: 110%;
+		z-index: 3;
+		animation: rosaanimation 2s;
+	}
+
+	#blau {
+		grid-area: blue;
+		/*background-color: white;*/
+		width: 100%;
+		z-index: 2;
+		position: relative;
+		left: 200px;
+		top: -50px;
+		animation: blaueanimation 2s;
+	}
+
+	#braun {
+		grid-area: brown;
+		/*background-color: green;*/
+		width: 100%;
+		position: relative;
+		left: 300px;
+		top: 20px;
+		animation: brauneanimation 2.5s;
+	}
+	
+	@keyframes rosaanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		right: 400px;
+		top: 400px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		right: 0;
+		top: 0;
+	  }
+	}
+
+	@keyframes blaueanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		left: -300px;
+		top: 400px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		left: 200px;
+		top: -50px;
+	  }
+	}
+
+	@keyframes brauneanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		left: -100px;
+		top: 450px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		left: 300px;
+		top: 20px;
+	  }
+	}
+	
+/* Produkte */
+	
+	#articleProdukte {
+		height: 750px;
+	}
+	
+	#produkteFlexbox {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 300px 300px;
+		grid-template-areas:
+			"eins zwei drei"
+			"noneeins vier nonezwei";
+		grid-gap: 20px;
+	}
+
+	#produktEins {
+		grid-area: eins;
+	}
+	
+	#produktZwei {
+		grid-area: zwei;
+	}
+	
+	#produktDrei {
+		grid-area: drei;
+	}
+	
+	#produktVier {
+		grid-area: vier;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	
+	header {
+		grid-template-areas: 
+			"sideLeft logo logo logo logo none3 nav nav nav nav sideRight";
+	}
+	
+	#navLinks {
+		display: block;
+	}
+	
+/* Animationen / Donuts */
+	#ersterBereich {
+		height: 500px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	
+	#animationsbereich {
+		height: 500px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	
+	#rosa {
+		grid-area: pink;
+		/*background-color: black;*/
+		width: 110%;
+		z-index: 3;
+		animation: rosaanimation 2s;
+	}
+
+	#blau {
+		grid-area: blue;
+		/*background-color: white;*/
+		width: 100%;
+		z-index: 2;
+		position: relative;
+		left: 150px;
+		top: -150px;
+		animation: blaueanimation 2s;
+	}
+
+	#braun {
+		grid-area: brown;
+		/*background-color: green;*/
+		width: 100%;
+		position: relative;
+		left: 240px;
+		top: -90px;
+		animation: brauneanimation 2.5s;
+	}
+	
+	@keyframes rosaanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		right: 400px;
+		top: 400px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		right: 0;
+		top: 0;
+	  }
+	}
+
+	@keyframes blaueanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		left: -300px;
+		top: 400px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		left: 150px;
+		top: -150px;
+	  }
+	}
+
+	@keyframes brauneanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		left: -100px;
+		top: 450px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		left: 240px;
+		top: -90px;
+	  }
+	}
+	
+/* Produkte */
+	
+	#produkteFlexbox {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 300px 300px;
+		grid-template-areas: 
+			"eins zwei"
+			"drei vier";
+		grid-gap: 20px;
+		justify-items: center;
+	}
+	
+	#produktEins {
+		grid-area: eins;
+	}
+	
+	#produktZwei {
+		grid-area: zwei;
+	}
+	
+	#produktDrei {
+		grid-area: drei;
+	}
+	
+	#produktVier {
+		grid-area: vier;
+	}
+	
+	#articleProdukte {
+		height: 750px;
+		animation: produkteanmiation 0.5s;
+		margin-top: 0;
+		padding-top: 0;
+	}
+	
+	@keyframes produkteanmiation { 
+		0% {
+			opacity: 0;
+		}
+		
+		90% {
+			opacity: 0;
+		}
+		
+		100% {
+			opacity: 1;	
+		}
+	}
+	
+/* stores */
+	
+	#storesAussenAbstand {
+		height: 750px;
+	}
+	
+	#storesInhalt {
+		text-align: center;
+	}
+	
+	iframe {
+		width: 80%;
+		float: none;
+	}
+	
+	#rechteSeite {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#storeEins {
+		text-align: left;
+	}
+
+	#storeZwei {
+		text-align: left;
+	}
+
+	#storeDrei {
+		text-align: left;
+	}
+
+	#storeVier {
+		text-align: left;
+	}
+	
+}
+
+@media only screen and (max-width: 500px) {
+	body {
+		background: linear-gradient(90deg, #17FFFF, #FF85FF);
+		padding: 0;
+		margin: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow-x: hidden;
+	}
+	
+/* header */
+	
+	header {
+		grid-template-areas: 
+			"logo logo logo logo logo none3 nav nav nav nav nav";
+	}
+	
+	#logo {
+		width: 90%;
+		margin-left: 10px;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+	
+	.menuBtn {
+		display: block;
+		width: 30px;
+		position: absolute;
+		right: 20px;
+		top: 40px;
+	}
+	
+	#navLinks {
+		display: none;
+	}
+	
+	#links {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-self: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 60%;
+		height: 100vh;
+		background-color: white;
+		z-index: 5;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		position: fixed;
+	}
+	
+	.navElement {
+		text-align: center;
+		width: 100%;
+	}
+
+/* Animation Hineinschweben */
+
+	@keyframes navHereinkommen {
+		0% {
+			position: absolute;
+			right: -600px;
+		}
+
+		100% {
+			position: absolute;
+			right: 0;
+		}
+	}
+		
+/* Die Buttons */
+		
+	#before {
+		display: block;
+		background-color: blue;
+		width: 20px;
+		height: 20px;
+		border-width: 0;
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 7;
+	}
+
+
+	#after {
+		display: block;
+		background-color: red;
+		width: 20px;
+		height: 20px;
+		border-width: 0;
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 7;
+	}
+
+/* Animation Herasuschweben */
+
+	#remove {
+		position: absolute;
+		right: -600px;
+		top: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		background-color: aliceblue;
+		z-index: 5;
+		animation: navHerasuschweben 1s;
+	}
+
+	@keyframes navHerasuschweben {
+		0% {
+			position: absolute;
+			right: 0;
+		}
+
+		100% {
+			position: absolute;
+			right: -600px;
+		}
+
+	}
+
+	
+/* animation und erster bereich */
+	
+	#ersterBereich {
+		height: 70vh;
+	}
+	
+	#animationsbereich {
+		height: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: repeat(6, 1fr);
+		grid-template-areas:
+			"h1 h1 h1"
+			"p p p"
+			"rosa rosa rosa"
+			"blau blau blau"
+			"braun braun braun";
+	}
+	
+	#animationsbereich h1 {
+		width: 94%;
+		font-size: 58px;
+		grid-area: h1;
+		margin: 30px 0 0 0;
+		padding: 0;
+	}
+	
+	#animationsbereich p {
+		width: 94%;
+		font-size: 30px;
+		grid-area: p;
+		margin: 30px 0 0 0;;
+		padding: 0;
+	}
+	
+	#rosa {
+		grid-area: rosa;
+		width: 45%;
+		position: relative;
+		right: -60px;
+		top: -10px;
+	}
+	
+	#blau {
+		grid-area: blau;
+		width: 30%;
+		position: relative;
+		left: -20px;
+		top: -100px;
+	}
+	
+	#braun {
+		grid-area: braun;
+		width: 20%;
+		position: relative;
+		top: -160px;
+		left: -80px;
+	}
+	
+	@keyframes rosaanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		right: 500px;
+		top: 400px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		right: -60px;
+		top: -10px;
+	  }
+	}
+
+	@keyframes blaueanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		left: -500px;
+		top: 400px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		left: -20px;
+		top: -100px;
+	  }
+	}
+
+	@keyframes brauneanimation { 
+	  0% {
+		transform: scale(0.1);
+		opacity: 0;
+		position: relative;
+		left: -400px;
+		top: 250px;
+	  }
+	  100% {
+		transform: scale(1);
+		opacity: 1;	
+		position: relative;
+		top: -160px;
+		left: -80px;
+	  }
+	}
+	
+/* Produkte */
+	
+	#articleProdukte {
+		height: 400px;
+		width: 100%;
+	}
+	
+	#produkteAussenAbstand {
+		width: 100%;
+		height: 300px;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	
+	#produkteFlexbox {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 300px;
+		grid-template-areas:
+			"eins zwei drei vier";
+		overflow-x: auto;
+		margin: 0 20px 0 0;
+		padding: 0;
+		width: 100%;
+	}
+	
+	#produktEins {
+		grid-area: eins;
+		margin-left: 30px;
+	}
+	
+	#produktZwei {
+		grid-area: zwei;
+	}
+	
+	#produktDrei {
+		grid-area: drei;
+	}
+	
+	#produktVier {
+		grid-area: vier;
+		padding-right: 30px;
+	}
+	
+/* Stroes */
+	#articleStores {
+		margin-top: 50px;
+		padding: 30px;
+	}
+	
+	#storesAussenAbstand {
+		margin: 0;
+		padding: 0;
+		display: block;
+		height: 900px;
+	}
+	
+	#storesInhalt {
+		margin: 0;
+		padding: 0;
+	}
+	
+	iframe {
+		width: 100%;
+	}
+	
+	#rechteSeite {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

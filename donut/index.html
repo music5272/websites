@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>donut-house</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+	<header>
+		<img src="bilder/logo_donut house_2022.png" alt="logo" id="logo">
+		<nav>
+			<div id="navLinks">
+				<div id="links">
+					<a class="menu menuBtn" id="menuIn" href="javascript:void(0);" onclick="menu()"><i class="material-symbols-outlined">menu</i></a>
+					<a href="#articleProdukte" id="navNeu" class="navElement" onclick="menu()">NEUES</a>
+					<a href="#stores" id="navStores" class="navElement" onclick="menu()">Stores</a>
+				</div>
+			</div>
+			<a class="menu menuBtn" id="menuOut" href="javascript:void(0);" onclick="menu()"><i class="material-symbols-outlined">menu</i></a>
+		</nav>
+	</header>
+	<main>
+		<div id="ersterBereich">
+			<article id="animationsbereich">
+				<h1>Hol' dir die bunten Ringe!</h1>
+				<p>Hier ist für jeden Geschmack 'was dabei.</p>
+				<img src="bilder/rosa_bunt.png" id="rosa" alt="">
+				<img src="bilder/blau.png" id="blau" alt="">
+				<img src="bilder/braun_bunt.png" id="braun" alt="">
+			</article>
+		</div>
+		<article id="articleProdukte">
+			<h2>Jetzt neu</h2>
+			<div id="produkteAussenAbstand">
+				<div id="produkteFlexbox">
+					<div class="produkt" id="produktEins">
+						<img src="bilder/donutzwei.png" alt="product" class="produkteDonuts">
+						<div class="name">GO WILD DONUT</div>
+						<div class="beschreibung">Wilder Waldmeister trifft giftgrüne Kiwi</div>
+						<div class="preis">3,99€</div>
+					</div>
+					<div class="produkt" id="produktZwei">
+						<img src="bilder/donutdrei.png" alt="product" class="produkteDonuts">
+						<div class="name">BREAK OUT DONUT</div>
+						<div class="beschreibung">Renn davon und erfinde dich neu</div>
+						<div class="preis">4,99€</div>
+					</div>
+					<div class="produkt" id="produktDrei">
+						<img src="bilder/donutvier.png" alt="product" class="produkteDonuts">
+						<div class="name">CLASSY CHOCKY</div>
+						<div class="beschreibung">Ein Klassiker. Wer liebt ihn nicht?</div>
+						<div class="preis">3,99€</div>
+					</div>
+					<div id="produktVier">
+						<div class="produkt">
+							<img src="bilder/donutfünf.png" alt="product" class="produkteDonuts">
+							<div class="name">NEW VIBE</div>
+							<div class="beschreibung">Fresh aus L.A. - der Promi-Donut</div>
+							<div class="preis">6,99€</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article id="articleStores">
+			<h2 id="stores">Unsere Stores</h2>
+			<div id="storesAussenAbstand">
+				<div id="storesInhalt">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4477.000662592282!2d8.232663276047726!3d50.04011839775725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd960d1b00407f%3A0x652e94e96b5777b8!2sSchloss%20Biebrich!5e0!3m2!1sde!2sde!4v1650288175161!5m2!1sde!2sde" width="50%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<div id="rechteSeite">
+						<div id="storeEins">
+							<h3>Store in Wiesbaden</h3>
+							Donutstr. 8<br>
+							55116 Wiesbaden
+						</div>
+						<div id="storeZwei">
+							<h3>Store in Köln</h3>
+							Donutstr. 8<br>
+							55116 Köln
+						</div>
+						<div id="storeDrei">
+							<h3>Store in Mainz</h3>
+							Donutstr. 8<br>
+							55116 Mainz
+						</div>
+						<div id="storeVier">
+							<h3>Store in Hamburg</h3>
+							Donutstr. 8<br>
+							55116 Hamburg
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+	<footer>
+		<div id="footerLinks">
+			<a href="#">Impressum</a><br>
+			<a href="#">Datenschutz</a>
+		</div>
+		<div id="footerSocials">
+			<a href="#"><img src="bilder/instagram.jpeg" alt="Instagram"></a>
+			<a href="#"><img src="bilder/instagram.jpeg" alt="Instagram"></a>
+		</div>
+	</footer>
+	
+<!-- JavaScript für die Mobie Navigationsbar -->
+
+	<script>
+		function menu() {
+			let x = document.getElementById("navLinks");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
+	</script>
+</body>
+</html>

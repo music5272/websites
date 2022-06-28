@@ -1,0 +1,442 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+
+body {
+	background-color: #F0DBB8;
+	width: 100%;
+	font-family: 'Sen', sans-serif;
+}
+
+/* header */
+
+header {
+	text-align: center;
+	margin-bottom: 20px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-column-gap: 20px;
+	grid-template-rows: 200px 70px 200px;
+	grid-row-gap: 20px;
+	grid-template-areas:
+		"left logo logo logo logo right"
+		"left nav nav nav nav right"
+		"left banner banner banner banner right";
+}
+
+#logoDiv {
+	grid-area: logo;
+	text-align: center;
+}
+
+.headerLogo {
+	height: 200px;
+}
+
+nav {
+	grid-area: nav;
+}
+
+nav a {
+	color: black;
+	text-decoration: none;
+	margin: 10px 20px 10px 20px;
+	font-size: 20px;
+}
+
+.navActive {
+	/*text-decoration: underline #debd87 8px;*/
+  	text-decoration: none;
+  	border-bottom: 8px solid #debd87;
+  	padding-bottom: 3px;
+}
+
+#headerBanner {
+	grid-area: banner;
+	width: 100%;
+	background-image: url("images/banner Kopie.jpeg");
+	box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+	margin-top: 70px;
+	font-size: 40px;
+	color: #F0DBB8;
+	text-transform: uppercase;
+}
+
+/* main */
+
+#shopItems {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-column-gap: 20px;
+	grid-auto-rows: auto;
+	/*grid-template-rows: repeat(2, 335px) 200px;*/
+	grid-row-gap: 60px;
+	grid-template-areas:
+		"left firstRowOne firstRowTwo firstRowThree firstRowFour right"
+		"left secondRowOne secondRowTwo secondRowThree secondRowFour right"
+		"left newsletter newsletter newsletter newsletter right";
+}
+
+.shopItem {
+	width: calc(100% - 40px);
+	height: auto;
+	border: 0px solid black;
+	border-radius: 20px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.20);
+}
+
+.shopItem img {
+	width: 100%;
+}
+
+.productName {
+	height: 40px;
+}
+
+.price {
+	text-align: right;
+}
+
+.detailsBtn {
+	display: inline-block;
+	width: calc(100% - 70px);
+	padding: 10px;
+	color: white;
+	background-color: #0E7E33;
+	border-radius: 20px;
+	text-align: center;
+	text-decoration: none;
+}
+
+a.addToCard {
+	float: right;
+	height: 20px;
+	width: 20px;
+	background-color: #0E7E33;
+	border-radius: 20px;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.addToCard img {
+	height: 16px;
+	width: 16px;
+}
+
+#shopItemOne {
+	grid-area: firstRowOne;
+}
+
+#shopItemTwo {
+	grid-area: firstRowTwo;
+}
+
+#shopItemThree {
+	grid-area: firstRowThree;
+}
+
+#shopItemFour {
+	grid-area: firstRowFour;
+}
+
+#shopItemFive {
+	grid-area: secondRowOne;
+}
+
+#shopItemSix {
+	grid-area: secondRowTwo;
+}
+
+#shopItemSeven {
+	grid-area: secondRowThree;
+}
+
+#shopItemEight {
+	grid-area: secondRowFour;
+}
+
+#newsletterSignUp {
+	background-color: rgba(255, 255, 255, 0.20);
+	grid-area: newsletter;
+	margin: 0px;
+	padding: 0px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 20px;
+	grid-template-rows: 25% 75%;
+	grid-template-areas:
+		"image image heading heading"
+		"image image form form";
+}
+
+#newsletterSignUp img {
+	grid-area: image;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#newsletterHTwo {
+	grid-area: heading;
+}
+
+.newsletterForm {
+	grid-area: form;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+	header {
+		text-align: center;
+		margin-bottom: 20px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+		grid-column-gap: 20px;
+		grid-template-rows: 200px 70px 200px;
+		grid-row-gap: 20px;
+		grid-template-areas:
+			"left logo logo logo logo right"
+			"left nav nav nav nav right"
+			"left banner banner banner banner right";
+	}
+	
+	#shopItems {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+		grid-column-gap: 20px;
+		grid-auto-rows: auto;
+		/*grid-template-rows: repeat(2, 335px) 200px;*/
+		grid-row-gap: 60px;
+		grid-template-areas:
+			"left firstRowOne firstRowTwo firstRowThree firstRowFour right"
+			"left secondRowOne secondRowTwo secondRowThree secondRowFour right"
+			"left newsletter newsletter newsletter newsletter right";
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	header {
+		text-align: center;
+		margin-bottom: 20px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 20px 1fr 1fr 1fr 1fr 20px;
+		grid-column-gap: 20px;
+		grid-template-rows: 180px 40px 180px;
+		grid-row-gap: 20px;
+		grid-template-areas:
+			"left logo logo logo logo right"
+			"left nav nav nav nav right"
+			"left banner banner banner banner right";
+	}
+	
+	#shopItems {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 20px 1fr 1fr 1fr 20px;
+		grid-column-gap: 20px;
+		grid-auto-rows: auto;
+		/*grid-template-rows: repeat(2, 335px) 200px;*/
+		grid-row-gap: 60px;
+		grid-template-areas:
+			"left firstRowOne firstRowTwo firstRowThree right"
+			"left firstRowFour secondRowOne secondRowTwo right"
+			"left secondRowThree none secondRowFour right"
+			"left newsletter newsletter newsletter right";
+	}
+	
+	#shopItemSeven {
+		position: relative;
+		right: -110px;
+	}
+	
+	#shopItemEight {
+		position: relative;
+		left: -110px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	header {
+		text-align: center;
+		margin-bottom: 20px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+		grid-column-gap: 20px;
+		grid-template-rows: 180px 40px 180px;
+		grid-row-gap: 20px;
+		grid-template-areas:
+			"left logo logo logo logo right"
+			"left nav nav nav nav right"
+			"left banner banner banner banner right";
+	}
+	
+	#shopItems {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 50px 1fr 1fr 50px;
+		grid-column-gap: 20px;
+		grid-auto-rows: auto;
+		/*grid-template-rows: repeat(2, 335px) 200px;*/
+		grid-row-gap: 60px;
+		grid-template-areas:
+			"left firstRowOne firstRowTwo right"
+			"left firstRowThree firstRowFour right"
+			"left secondRowOne secondRowTwo right"
+			"left secondRowThree secondRowFour right"
+			"left newsletter newsletter right"
+			"left newsletter newsletter right";
+	}
+	
+	#shopItemSeven {
+		position: static;
+	}
+	
+	#shopItemEight {
+		position: static;
+	}
+	
+	#newsletterSignUp {
+		background-color: rgba(255, 255, 255, 0.20);
+		grid-area: newsletter;
+		margin: 0px;
+		padding: 0px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 20px;
+		grid-template-rows: 35% 65%;
+		grid-template-areas:
+			"image image heading heading"
+			"image image form form";
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	header {
+		text-align: center;
+		padding: 0px;
+		margin: 0px;
+		margin-bottom: 20px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 20px 1fr 20px;
+		grid-column-gap: 20px;
+		grid-template-rows: 100px 150px 200px;
+		grid-row-gap: 20px;
+		grid-template-areas:
+			"left logo right"
+			"left nav right"
+			"left banner right";
+	}
+	
+	#logoDiv {
+		width: 100%;
+		margin: 0px;
+	}
+	
+	#logoDiv img {
+		width: 80%;
+		height: auto;
+	}
+	
+	nav {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.navActive {
+		border-width: 0px;
+		text-decoration-color: antiquewhite;
+		text-decoration-style: solid;
+		text-decoration-line: underline;
+		text-decoration-thickness: 8px;
+		text-underline-position: under;
+	}
+	
+	#headerBanner {
+		width: 100%;
+	}
+	
+	#shopItems {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 20px 1fr 1fr 20px;
+		grid-column-gap: 20px;
+		grid-auto-rows: auto;
+		/*grid-template-rows: repeat(2, 335px) 200px;*/
+		grid-row-gap: 20px;
+		grid-template-areas:
+			"left firstRowOne firstRowTwo right"
+			"left firstRowThree firstRowFour right"
+			"left secondRowOne secondRowTwo right"
+			"left secondRowThree secondRowFour right"
+			"left newsletter newsletter right"
+			"left newsletter newsletter right";
+	}
+	
+	.shopItem {
+		width: calc(100% - 40px);
+	}
+	
+	.detailsBtn {
+		display: block;
+		width: calc(100% - 20px);
+		padding: 10px;
+		color: white;
+		background-color: #0E7E33;
+		border-radius: 20px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	a.addToCard {
+		width: calc(100% - 20px);
+		float: left;
+		height: 20px;
+		background-color: #0E7E33;
+		border-radius: 20px;
+		padding: 10px;
+		text-align: center;
+		vertical-align: middle;
+		margin-top: 10px;
+	}
+	
+	#newsletterSignUp {
+		display: block;
+	}
+	
+	#newsletterSignUp img {
+		height: 200px;
+	}
+	
+	#newsletterSignUp h2, #newsletterSignUp form {
+		margin: 0px 10px 0px 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
